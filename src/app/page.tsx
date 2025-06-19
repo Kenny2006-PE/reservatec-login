@@ -1,5 +1,4 @@
 "use client";
-
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 
@@ -35,7 +34,7 @@ export default function LoginPage() {
         </p>
         {/* Google Button */}
         <button
-          onClick={() => signIn("google")}
+          onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
           className="flex items-center justify-center w-full border border-gray-300 rounded px-4 py-2 hover:bg-gray-100 transition mb-2"
         >
           <span className="flex items-center">
